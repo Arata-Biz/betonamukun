@@ -39,13 +39,13 @@ export async function POST(req: NextRequest) {
             const { text } = event.message;
             const { replyToken } = event;
 
-            // KIỂM TRA LỆNH: Chỉ dịch nếu tin nhắn bắt đầu bằng dấu '#'
+            // KIỂM TRA LỆNH: Chỉ dịch nếu tin nhắn bắt đầu bằng dấu '@'
             // Điều này giúp nhân viên công ty vẫn có thể chat bình thường với khách hàng
-            if (!text.startsWith('#')) {
+            if (!text.startsWith('@')) {
                 continue;
             }
 
-            // Cắt bỏ dấu '#' để lấy nội dung cần dịch
+            // Cắt bỏ dấu '@' để lấy nội dung cần dịch
             const contentToTranslate = text.substring(1).trim();
 
             if (!contentToTranslate) {
@@ -62,7 +62,7 @@ export async function POST(req: NextRequest) {
                     replyToken: replyToken,
                     messages: [{
                         type: 'text',
-                        text: `🤖 [Dịch]: ${translatedText}`
+                        text: `🤖 [AI]: ${translatedText}`
                     }],
                 });
             } catch (geminiError) {

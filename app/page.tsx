@@ -89,8 +89,8 @@ export default function Home() {
             Chỉ cần cài đặt URL Webhook trên LINE Developers Console và cấu hình API Key trong Environment Variables.
           </p>
           <div className="bg-slate-950/30 backdrop-blur-md border border-white/10 p-6 rounded-2xl font-mono text-sm mb-8 text-indigo-50 underline-offset-4">
-            <p className="mb-2"># Webhook URL format:</p>
-            <p className="text-white italic">https://your-domain.vercel.app/api/webhook</p>
+            <p className="mb-2"># Sử dụng ký tự '@' trước câu cần dịch:</p>
+            <p className="text-white italic">@Hôm nay trời đẹp quá</p>
           </div>
           <p className="text-xs text-indigo-200">
             © 2026 Arata-Biz. All rights reserved.
