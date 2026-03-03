@@ -30,7 +30,7 @@ export default function Home() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
             </span>
-            Powered by Gemini 2.0 Flash
+            Powered by Gemini 2.5 Flash
           </div>
           <h1 className="text-5xl sm:text-7xl font-bold text-white tracking-tight mb-8 leading-[1.1]">
             Dịch thuật <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-blue-500">Việt - Nhật</span> thông minh.
@@ -67,8 +67,8 @@ export default function Home() {
               icon: "🏭"
             },
             {
-              title: "Tích hợp Gemini 2.0",
-              desc: "Sử dụng trí tuệ nhân tạo thế hệ mới nhất cho độ chính xác và tốc độ vượt trội.",
+              title: "Tích hợp Gemini 2.5",
+              desc: "Sử dụng trí tuệ nhân tạo thế hệ mới nhất cho độ chính xác và tốc độ vượt trội. (Gemini 2.5)",
               icon: "⚡"
             }
           ].map((f, i) => (

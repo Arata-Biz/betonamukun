@@ -1,11 +1,11 @@
 # 🤖 LINE Translation Bot (Vietnamese - Japanese)
 
-Bot dịch thuật tự động Việt - Nhật sử dụng **Next.js 15**, **LINE Messaging API** và trí tuệ nhân tạo **Gemini 2.0 Flash**.
+Bot dịch thuật tự động Việt - Nhật sử dụng **Next.js 15**, **LINE Messaging API** và trí tuệ nhân tạo **Gemini 2.5 Flash**.
 
 ## 🚀 Tính năng
 - **Dịch thuật 2 chiều**: Tự động nhận diện và dịch Nhật -> Việt hoặc Việt -> Nhật.
 - **Tối ưu xí nghiệp**: Ngôn từ ngắn gọn, dễ hiểu, phù hợp cho thực tập sinh và kỹ sư tại Nhật.
-- **Tốc độ cao**: Sử dụng Gemini 2.0 Flash mới nhất cho phản hồi gần như tức thì.
+- **Tốc độ cao**: Sử dụng Gemini 2.5 Flash mới nhất cho phản hồi gần như tức thì.
 - **Xử lý thông minh**: Chỉ dịch tin nhắn văn bản, tự động bỏ qua sticker, ảnh và các sự kiện rác.
 
 ## 🛠️ Cài đặt & Cấu hình
