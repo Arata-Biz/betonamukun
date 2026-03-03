@@ -39,9 +39,22 @@ export async function POST(req: NextRequest) {
             const { text } = event.message;
             const { replyToken } = event;
 
+            // KIỂM TRA LỆNH: Chỉ dịch nếu tin nhắn bắt đầu bằng dấu '#'
+            // Điều này giúp nhân viên công ty vẫn có thể chat bình thường với khách hàng
+            if (!text.startsWith('#')) {
+                continue;
+            }
+
+            // Cắt bỏ dấu '#' để lấy nội dung cần dịch
+            const contentToTranslate = text.substring(1).trim();
+
+            if (!contentToTranslate) {
+                continue;
+            }
+
             try {
                 // 4. Tích hợp Gemini để dịch thuật
-                const result = await model.generateContent(text);
+                const result = await model.generateContent(contentToTranslate);
                 const translatedText = result.response.text().trim();
 
                 // 5. Dùng replyToken để phản hồi ngay lập tức
@@ -49,7 +62,7 @@ export async function POST(req: NextRequest) {
                     replyToken: replyToken,
                     messages: [{
                         type: 'text',
-                        text: translatedText
+                        text: `🤖 [Dịch]: ${translatedText}`
                     }],
                 });
             } catch (geminiError) {
