@@ -12,7 +12,7 @@ const client = new MessagingApiClient({
 // Khởi tạo Gemini AI
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
 const model = genAI.getGenerativeModel({
-    model: 'gemini-1.5-flash',
+    model: 'gemini-2.0-flash',
     systemInstruction: 'Bạn là thông dịch viên tại xí nghiệp Nhật Bản. Nếu input là tiếng Việt, dịch sang tiếng Nhật. Nếu input là tiếng Nhật, dịch sang tiếng Việt. Ưu tiên ngôn từ ngắn gọn, dễ hiểu cho thực tập sinh, bỏ qua kính ngữ rườm rà. Chỉ trả về text kết quả dịch, tuyệt đối không giải thích.',
 });
 
